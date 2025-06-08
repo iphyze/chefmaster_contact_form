@@ -102,11 +102,118 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $mail->isHTML(true);
             $mail->Subject = "New Contact Form Submission - $siteName";
             $mail->Body = "
-                <h2>New Contact Message from Website</h2>
-                <p><strong>Name:</strong> $fullName</p>
-                <p><strong>Email:</strong> $email</p>
-                <p><strong>Phone:</strong> $phone</p>
-                <p><strong>Message:</strong><br/>" . nl2br($message) . "</p>
+                <!DOCTYPE html>
+                <html lang='en'>
+                <head>
+                <meta charset='UTF-8'>
+                <title>New Contact Message</title>
+                <style>
+                    body {
+                    font-family: Arial, sans-serif;
+                    background-color: #f6f6f6;
+                    margin: 0;
+                    padding: 0;
+                    }
+                    .container {
+                    max-width: 600px;
+                    margin: 0 auto;
+                    background: #ffffff;
+                    border-radius: 8px;
+                    padding: 40px 30px;
+                    text-align: center;
+                    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+                    }
+                    .logo {
+                    font-size: 24px;
+                    font-weight: bold;
+                    color: #B31D35;
+                    margin-bottom: 20px;
+                    text-align: center;
+                    }
+                    .image-container {
+                        margin: 30px auto;
+                    }
+                    .image-container img {
+                        width: 100px;
+                    }
+                    h2 {
+                    color: #B31D35;
+                    text-align: center;
+                    }
+                    p {
+                    color: #333333;
+                    line-height: 1.6;
+                    }
+                    strong {
+                    color: #000000;
+                    }
+                    .message {
+                    background-color: #f0f0f0;
+                    padding: 15px;
+                    border-radius: 6px;
+                    font-style: italic;
+                    color: #444444;
+                    }
+                    .social-icons {
+                    text-align: center;
+                    margin: 30px 0 10px;
+                    }
+                    .social-icons a {
+                    display: inline-block;
+                    margin: 0 8px;
+                    }
+                    .social-icons img {
+                    width: 30px;
+                    height: 30px;
+                    }
+                    .footer {
+                    font-size: 12px;
+                    color: #aaaaaa;
+                    text-align: center;
+                    margin-top: 30px;
+                    }
+                </style>
+                </head>
+                <body>
+                <div class='container'>
+                    <div class='logo'>Chef Master Africa</div>
+
+                    <div class='image-container'>
+                        <img src='https://cdn-icons-png.flaticon.com/512/561/561127.png' alt='Envelope Icon'>
+                    </div>
+
+                    <h2>New Contact Message from Website</h2>
+
+                    <p><strong>Name:</strong> " . htmlspecialchars($fullName) . "</p>
+                    <p><strong>Email:</strong> " . htmlspecialchars($email) . "</p>
+                    <p><strong>Phone:</strong> " . htmlspecialchars($phone) . "</p>
+                    <p><strong>Message:</strong></p>
+                    <div class='message'>" . nl2br(htmlspecialchars($message)) . "</div>
+
+                    <div class='social-icons'>
+                    <a href='https://www.facebook.com/share/16B2ibmT7X/' target='_blank'>
+                        <img src='https://cdn-icons-png.flaticon.com/512/733/733547.png' alt='Facebook'>
+                    </a>
+                    <a href='https://x.com/ChefAfrica56241?t=ND48MBpm20PXYtvDlkxmiw&s=08' target='_blank'>
+                        <img src='https://cdn-icons-png.flaticon.com/512/733/733579.png' alt='Twitter/X'>
+                    </a>
+                    <a href='https://www.instagram.com/chefmasterafrica/profilecard/?igsh=MW1jZ25jY2NrZWln' target='_blank'>
+                        <img src='https://cdn-icons-png.flaticon.com/512/733/733558.png' alt='Instagram'>
+                    </a>
+                    <a href='mailto:info@chefmasterafrica.org'>
+                        <img src='https://cdn-icons-png.flaticon.com/512/732/732200.png' alt='Email'>
+                    </a>
+                    <a href='https://youtube.com/@chefmasterafricatv?si=okr3rKUbX4f-Jq5I' target='_blank'>
+                        <img src='https://cdn-icons-png.flaticon.com/512/733/733646.png' alt='YouTube'>
+                    </a>
+                    </div>
+
+                    <div class='footer'>
+                    <p>Chef Master Africa Team</p>
+                    </div>
+                </div>
+                </body>
+                </html>
             ";
             $mail->send();
             $mail->clearAddresses();
@@ -115,13 +222,120 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $mail->addAddress($email, $fullName);
             $mail->Subject = "Thanks for contacting $siteName!";
             $mail->Body = "
-                <p>Dear $fullName,</p>
-                <p>Thank you for reaching out to us. We’ve received your message and will get back to you shortly.</p>
-                <hr>
-                <p><strong>Your Message:</strong></p>
-                <p>" . nl2br($message) . "</p>
-                <hr>
-                <p>Regards,<br>$siteName Team</p>
+                <!DOCTYPE html>
+                <html lang='en'>
+                <head>
+                <meta charset='UTF-8'>
+                <title>Email Confirmation</title>
+                <style>
+                    body {
+                    font-family: Arial, sans-serif;
+                    background-color: #f6f6f6;
+                    margin: 0;
+                    padding: 0;
+                    }
+                    .container {
+                    max-width: 600px;
+                    margin: 0 auto;
+                    background: #ffffff;
+                    border-radius: 8px;
+                    padding: 40px 30px;
+                    text-align: center;
+                    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+                    }
+                    .logo {
+                    font-size: 24px;
+                    font-weight: bold;
+                    color: #B31D35;
+                    margin-bottom: 20px;
+                    }
+                    .header{
+                        color: #B31D35;
+                    }
+                    .image-container {
+                    margin: 30px 0;
+                    }
+                    .image-container img {
+                    width: 100px;
+                    }
+                    h2 {
+                    color: #333333;
+                    }
+                    p {
+                    color: #666666;
+                    line-height: 1.6;
+                    }
+                    .btn {
+                    display: inline-block;
+                    background-color: #B31D35;
+                    color: #ffffff !important;
+                    padding: 12px 24px;
+                    border-radius: 30px;
+                    text-decoration: none;
+                    font-weight: bold;
+                    margin-top: 30px;
+                    }
+                    .social-icons {
+                    margin: 30px 0 10px;
+                    }
+                    .social-icons a {
+                    display: inline-block;
+                    margin: 0 8px;
+                    }
+                    .social-icons img {
+                    width: 30px;
+                    height: 30px;
+                    }
+                    .footer {
+                    font-size: 12px;
+                    color: #aaaaaa;
+                    margin-top: 30px;
+                    }
+                </style>
+                </head>
+                <body>
+                <div class='container'>
+                    <div class='logo'>Chef Master Africa</div>
+
+                    <div class='image-container'>
+                    <img src='https://cdn-icons-png.flaticon.com/512/561/561127.png' alt='Envelope Icon'>
+                    </div>
+
+                    <h2 class='header'>Hi " . htmlspecialchars($fullName) . ",</h2>
+                    <p>Thank you for reaching out to us. We’ve received your message and will get back to you shortly.</p>
+
+                    <hr style='border: none; border-top: 1px solid #eee; margin: 30px 0;'>
+
+                    <p><strong>Your Message:</strong></p>
+                    <p style='font-style: italic; color: #444444;'>" . nl2br(htmlspecialchars($message)) . "</p>
+
+                    <a href='https://chefmaster.mahjongclinic.com' class='btn'>VISIT WEBSITE</a>
+
+                    <div class='social-icons'>
+                    <a href='https://www.facebook.com/share/16B2ibmT7X/' target='_blank'>
+                        <img src='https://cdn-icons-png.flaticon.com/512/733/733547.png' alt='Facebook'>
+                    </a>
+                    <a href='https://x.com/ChefAfrica56241?t=ND48MBpm20PXYtvDlkxmiw&s=08' target='_blank'>
+                        <img src='https://cdn-icons-png.flaticon.com/512/733/733579.png' alt='Twitter/X'>
+                    </a>
+                    <a href='https://www.instagram.com/chefmasterafrica/profilecard/?igsh=MW1jZ25jY2NrZWln' target='_blank'>
+                        <img src='https://cdn-icons-png.flaticon.com/512/733/733558.png' alt='Instagram'>
+                    </a>
+                    <a href='mailto:info@chefmasterafrica.org'>
+                        <img src='https://cdn-icons-png.flaticon.com/512/732/732200.png' alt='Email'>
+                    </a>
+                    <a href='https://youtube.com/@chefmasterafricatv?si=okr3rKUbX4f-Jq5I' target='_blank'>
+                        <img src='https://cdn-icons-png.flaticon.com/512/733/733646.png' alt='YouTube'>
+                    </a>
+                    </div>
+
+                    <div class='footer'>
+                    <p>Regards,<br>" . htmlspecialchars($siteName) . " Team</p>
+                    </div>
+                </div>
+                </body>
+                </html>
+
             ";
             $mail->send();
 
