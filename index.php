@@ -17,8 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
 
 
 $requestUri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
-$basePath = '/clients-survey-form-db/api';
-// $basePath = '/servers/clients_survey_form_db/api';
+$basePath = '/servers/chefmaster_db/api';
 $relativePath = str_replace($basePath, '', $requestUri);
 
 // Define route mappings
@@ -26,6 +25,7 @@ $routes = [
     '/'         => 'routes/welcome.php',
     '/welcome'  => 'routes/welcome.php',
     '/clientdata' => 'routes/data/form_data.php',
+    '/contact' => 'routes/data/contact_form.php',
 ];
 
 // Check if the route exists
