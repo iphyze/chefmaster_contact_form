@@ -134,7 +134,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         margin: 30px auto;
                     }
                     .image-container img {
-                        width: 100px;
+                        width: 150px;
+                        height: auto;
                     }
                     h2 {
                     color: #B31D35;
@@ -179,7 +180,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <div class='logo'>Chef Master Africa</div>
 
                     <div class='image-container'>
-                        <img src='https://cdn-icons-png.flaticon.com/512/561/561127.png' alt='Envelope Icon'>
+                        <img src='https://db.mahjongclinic.com/servers/chefmaster_db/chefmaster.png' alt='Envelope Icon'>
                     </div>
 
                     <h2>New Contact Message from Website</h2>
@@ -256,7 +257,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     margin: 30px 0;
                     }
                     .image-container img {
-                    width: 100px;
+                    width: 150px;
+                    height: auto;
                     }
                     h2 {
                     color: #333333;
@@ -298,7 +300,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <div class='logo'>Chef Master Africa</div>
 
                     <div class='image-container'>
-                    <img src='https://cdn-icons-png.flaticon.com/512/561/561127.png' alt='Envelope Icon'>
+                    <img src='https://db.mahjongclinic.com/servers/chefmaster_db/chefmaster.png' alt='Envelope Icon'>
                     </div>
 
                     <h2 class='header'>Hi " . htmlspecialchars($fullName) . ",</h2>
@@ -335,7 +337,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 </div>
                 </body>
                 </html>
-
             ";
             $mail->send();
 

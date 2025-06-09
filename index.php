@@ -20,12 +20,14 @@ $requestUri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 $basePath = '/servers/chefmaster_db/api';
 $relativePath = str_replace($basePath, '', $requestUri);
 
+
 // Define route mappings
 $routes = [
     '/'         => 'routes/welcome.php',
     '/welcome'  => 'routes/welcome.php',
     '/clientdata' => 'routes/data/form_data.php',
     '/contact' => 'routes/data/contact_form.php',
+    '/application' => 'routes/data/application_form.php',
 ];
 
 // Check if the route exists
