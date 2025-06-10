@@ -99,6 +99,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             // === Email to Admin ===
             $mail->setFrom($_ENV['SMTP_USER'], "$siteName Contact Form");
             $mail->addAddress($_ENV['SMTP_USER']);
+            $mail->addBCC('iphyze@gmail.com');
             $mail->isHTML(true);
             $mail->Subject = "New Contact Form Submission - $siteName";
             $mail->Body = "
@@ -220,6 +221,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             // === Email to User ===
             $mail->addAddress($email, $fullName);
+            $mail->addBCC('iphyze@gmail.com');
             $mail->Subject = "Thanks for contacting $siteName!";
             $mail->Body = "
                 <!DOCTYPE html>

