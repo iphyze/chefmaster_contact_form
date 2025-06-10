@@ -94,7 +94,7 @@ return "
 <body>
 <div class='container'>
     <div class='image-container'>
-    <img src='https://db.mahjongclinic.com/servers/chefmaster_db/chefmaster.png' alt='Envelope Icon'>
+    <img src='https://db.mahjongclinic.com/servers/chefmaster_db/uploads/chefmaster.png' alt='Envelope Icon'>
     </div>
 
     <h2 class='header'>Hi " . htmlspecialchars($fullName) . ",</h2>
