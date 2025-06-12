@@ -111,6 +111,9 @@ return "
     <p><strong>Gender:</strong></p>
     <div class='message'>" . htmlspecialchars($gender ?? '') . "</div>
 
+    <p><strong>State:</strong></p>
+    <div class='message'>" . htmlspecialchars($state_of_origin ?? '') . "</div>
+
     <p><strong>Email:</strong></p>
     <div class='message'>" . htmlspecialchars($email ?? '') . "</div>
 
@@ -120,16 +123,25 @@ return "
     <p><strong>Address:</strong></p>
     <div class='message'>" . htmlspecialchars($address ?? '') . "</div>
 
-    <p><strong>Occupation:</strong></p>
+    <p><strong>City:</strong></p>
+    <div class='message'>" . htmlspecialchars($city ?? '') . "</div>
+
+    <p><strong>State:</strong></p>
+    <div class='message'>" . htmlspecialchars($state ?? '') . "</div>
+
+    <p><strong>Zip Code:</strong></p>
+    <div class='message'>" . htmlspecialchars($zip_code ?? '') . "</div>
+    
+    <p><strong>Current Occupation:</strong></p>
     <div class='message'>" . htmlspecialchars($occupation ?? '') . "</div>
 
-    <p><strong>Years of Experience:</strong></p>
+    <p><strong>Years of Experience in cooking:</strong></p>
     <div class='message'>" . htmlspecialchars($years_of_experience ?? '') . "</div>
 
-    <p><strong>Culinary Training:</strong></p>
+    <p><strong>Culinary Training/Education:</strong></p>
     <div class='message'>" . htmlspecialchars($culinary_training ?? '') . "</div>
 
-    <p><strong>Degree:</strong></p>
+    <p><strong>Degree/Certificate:</strong></p>
     <div class='message'>" . htmlspecialchars($degree ?? '') . "</div>
 
     <p><strong>Graduation Year:</strong></p>
@@ -141,13 +153,13 @@ return "
     <p><strong>Food Allergies:</strong></p>
     <div class='message'>" . htmlspecialchars($food_allergies ?? '') . "</div>
 
-    <p><strong>Signature Dish:</strong></p>
+    <p><strong>What's Signature Dish:</strong></p>
     <div class='message'>" . htmlspecialchars($signature_dish ?? '') . "</div>
 
-    <p><strong>Signature Dish Description:</strong></p>
+    <p><strong>Describe your Signature Dish:</strong></p>
     <div class='message'>" . htmlspecialchars($signature_dish_description ?? '') . "</div>
 
-    <p><strong>Participation Reason:</strong></p>
+    <p><strong>Why do you want to participate in this competition?:</strong></p>
     <div class='message'>" . htmlspecialchars($participation_reason ?? '') . "</div>
 
     <p><strong>Emergency Contact Name:</strong></p>
@@ -161,6 +173,18 @@ return "
 
     <p><strong>Emergency Contact Address:</strong></p>
     <div class='message'>" . htmlspecialchars($address_emergency ?? '') . "</div>
+
+    <p><strong>Emergency Contact City:</strong></p>
+    <div class='message'>" . htmlspecialchars($city_emergency ?? '') . "</div>
+
+    <p><strong>Emergency Contact State:</strong></p>
+    <div class='message'>" . htmlspecialchars($state_emergency ?? '') . "</div>
+
+    <p><strong>Emergency Contact Zip Code:</strong></p>
+    <div class='message'>" . htmlspecialchars($zip_code_emergency ?? '') . "</div>
+
+    <p><strong>How did you hear about this competition?:</strong></p>
+    <div class='message'>" . htmlspecialchars($competition_knowledge ?? '') . "</div>
 
     <p><strong>Passport Image Link:</strong></p>
     <div class='message'>" . (!empty($passport_image_url) ? "<a href='" . htmlspecialchars($passport_image_url) . "' target='_blank'>View Image</a>" : "Not Provided") . "</div>
