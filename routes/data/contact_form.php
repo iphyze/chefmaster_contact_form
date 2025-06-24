@@ -180,7 +180,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <div class='container'>
 
                     <div class='image-container'>
-                        <img src='https://db.mahjongclinic.com/servers/chefmaster_db/uploads/chefmaster.png' alt='Envelope Icon'>
+                        <img src='https://api.chefmasterafrica.org/servers/chefmaster_db/uploads/chefmaster.png' alt='Envelope Icon'>
                     </div>
 
                     <h2>New Contact Message from Website</h2>
@@ -300,7 +300,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <div class='container'>
 
                     <div class='image-container'>
-                    <img src='https://db.mahjongclinic.com/servers/chefmaster_db/uploads/chefmaster.png' alt='Envelope Icon'>
+                    <img src='https://api.chefmasterafrica.org/servers/chefmaster_db/uploads/chefmaster.png' alt='Envelope Icon'>
                     </div>
 
                     <h2 class='header'>Hi " . htmlspecialchars($fullName) . ",</h2>

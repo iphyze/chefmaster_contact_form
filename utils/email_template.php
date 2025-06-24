@@ -94,7 +94,7 @@ return "
 <body>
 <div class='container'>
     <div class='image-container'>
-    <img src='https://db.mahjongclinic.com/servers/chefmaster_db/uploads/chefmaster.png' alt='Envelope Icon'>
+    <img src='https://api.chefmasterafrica.org/servers/chefmaster_db/uploads/chefmaster.png' alt='Envelope Icon'>
     </div>
 
     <h2 class='header'>Hi " . htmlspecialchars($fullName) . ",</h2>
@@ -193,7 +193,7 @@ return "
     <div class='message'>" . (!empty($signature_image_url) ? "<a href='" . htmlspecialchars($signature_image_url) . "' target='_blank'>View Image</a>" : "Not Provided") . "</div>
 
 
-    <a href='https://chefmaster.mahjongclinic.com' class='btn'>VISIT WEBSITE</a>
+    <a href='https://chefmasterafrica.org' class='btn'>VISIT WEBSITE</a>
 
     <div class='social-icons'>
     <a href='https://www.facebook.com/share/16B2ibmT7X/' target='_blank'>
@@ -312,7 +312,7 @@ return "
 <body>
 <div class='container'>
     <div class='image-container'>
-    <img src='https://chefmaster.mahjongclinic.com/assets/logo--O-db_X9.png' alt='Envelope Icon'>
+    <img src='https://api.chefmasterafrica.org/servers/chefmaster_db/uploads/chefmaster.png' alt='Envelope Icon'>
     </div>
 
     <h2 class='header'>Hi " . htmlspecialchars($fullName) . ",</h2>
@@ -378,7 +378,7 @@ return "
     <div class='message'>" . htmlspecialchars($address_emergency ?? '') . "</div>
 
 
-    <a href='https://chefmaster.mahjongclinic.com' class='btn'>VISIT WEBSITE</a>
+    <a href='https://chefmasterafrica.org' class='btn'>VISIT WEBSITE</a>
 
     <div class='social-icons'>
     <a href='https://www.facebook.com/share/16B2ibmT7X/' target='_blank'>
